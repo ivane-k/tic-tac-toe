@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&family=Permanent+Marker&display=swap');
+
+/* general */
+:root {
+    --pink: #E2008A;
+    --yellow: #FDF100;
+    --background: #adadad;
+    --foreground: #4E53A5;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* header */
+header {
+    padding: 30px 0;
+    font-size: 32px;
+}
+
+h1, h2 {
+    color: var(--foreground);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* gameboard */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 458px;
+    height: 458px;
+    border: 4px solid var(--foreground);
+    border-collapse: collapse;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    font-size: 50px;
+    font-family: 'Permanent Marker', cursive;
+    border: 2px solid var(--foreground);
+}
+
+.square:hover {
+    cursor: pointer;
+    background-color: #9b9b9b;
+}
+
+.pink {
+    color: var(--pink);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+/* footer */
+footer {
+    margin-top: 60px;
+    padding: 30px 0;
+    color: var(--foreground);
+}
+
+footer i {
+    margin-left: 10px;
+}
+
+/* modal */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContent {
+    width: 500px;
+    padding: 30px;
+    margin: 15% auto;
+    border: 2px solid var(--foreground);
+    background-color: var(--background);
+    color: var(--foreground);
+    text-align: center;
+    font-size: 30px;
+}
+
+#playAgain {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#message {
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--foreground);
+    padding: 20px;
+    color: white;
+}
